@@ -1,0 +1,37 @@
+{
+    "name": "himelali/commission-task",
+    "description": "Commission task description",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Md. Himel Ali",
+            "email": "himelali@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5",
+        "friendsofphp/php-cs-fixer": "3.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Himelali\\CommissionTask\\": "src/"
+        },
+        "files": ["src/helpers.php"]
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": ["@phpunit", "@test-cs"]
+    }
+}
